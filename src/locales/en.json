@@ -1,3 +1,13 @@
 {
-  "message": "Hello i18n !!"
+  "message": "Hello i18n !!",
+  "title": "Sihem's personality",
+  "content": {
+    "title": "« Campaigner » Personality",
+    "citation": {
+      "cite": "It doesn’t interest me what you do for a living. I want to know what you ache for – and if you dare to dream of meeting your heart’s longing.",
+      "author": "ORIAH MOUNTAIN DREAMER"
+    },
+    "paragraph": "Campaigners (ENFPs) are true free spirits – outgoing, openhearted, and open-minded. With their lively, upbeat approach to life, they stand out in any crowd. But even though they can be the life of the party, Campaigners don’t just care about having a good time. These personality types run deep – as does their longing for meaningful, emotional connections with other people."
+  },
+  "thanks": "Thanks to {url} for the content!!!"
 }

@@ -1,3 +1,13 @@
 {
-  "message": "Salut i18n !!"
+  "message": "Salut i18n !!",
+  "title": "La personalité de sihem",
+  "content": {
+    "title": "La personnalité « Inspirateur »",
+    "citation": {
+      "cite": "Votre gagne-pain ne m’intéresse pas. Je veux savoir de quoi vous vous languissez et si vous osez rêver de rencontrer ce dont votre coeur se languit. Votre âge ne m’intéresse pas. Je veux savoir si vous accepterez de prendre le risque d’avoir l’air idiot pour l’amour, pour vos rêves, pour l’aventure d’être vivant.",
+      "author": "ORIAH MOUNTAIN DREAMER"
+    },
+    "paragraph": "La personnalité « Inspirateur » est un véritable esprit libre. Ils sont souvent l’âme d’une soirée mais, à la différence des Explorateurs, ils sont moins intéressés par l’excitation et le plaisir purs du moment présent que par l’appréciation des connexions sociales et émotionnelles qu’ils établissent avec autrui. Charmants, indépendants, énergiques et compatissants, les 7 % de la population qu’ils représentent peuvent certainement se repérer dans n’importe quelle foule."
+  },
+  "thanks": "Merci à {url} pour le contenu!!!"
 }

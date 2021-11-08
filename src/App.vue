@@ -1,50 +1,58 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+    <v-app-bar dense dark app>
+      <v-spacer></v-spacer>
+      <v-toolbar-title>{{ $t("title") }}</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <lang-switcher-button></lang-switcher-button>
     </v-app-bar>
 
     <v-main>
       <router-view />
     </v-main>
+
+    <v-footer app dark class="white--text text-center">
+      <v-card-text class="white--text pt-0">
+        <v-btn text href="https://www.16personalities.com">
+          {{ $t("thanks", { url: "www.16personalities.com" }) }}
+        </v-btn>
+      </v-card-text>
+
+      <v-card-text class="white--text">
+        {{ new Date().getFullYear() }}
+      </v-card-text>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
+import LangSwitcherButton from "@/components/LangSwitcherButton.vue";
+import { useLocaleState } from "@/composables/locale";
 export default {
   name: "App",
 
-  data: () => ({
-    //
-  })
+  components: { LangSwitcherButton },
+
+  data() {
+    return {};
+  },
+
+  setup() {
+    const { shortLocale, locale } = useLocaleState();
+
+    return {
+      locale,
+      shortLocale
+    };
+  },
+
+  created() {
+    this.$i18n.locale = this.shortLocale;
+    this.$vuetify.lang.current = this.shortLocale;
+    if (this.shortLocale === "ar") this.$vuetify.rtl = true;
+    else this.$vuetify.rtl = false;
+  }
 };
 </script>
