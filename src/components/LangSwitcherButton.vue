@@ -32,9 +32,10 @@ export default {
   methods: {
     setLocale(locale) {
       this.locale = locale;
-
+      // Set the language of i18n and vuerify plugins
       this.$i18n.locale = this.shortLocale;
       this.$vuetify.lang.current = this.shortLocale;
+      // Switch text direction
       if (this.shortLocale === "ar") this.$vuetify.rtl = true;
       else this.$vuetify.rtl = false;
     }
@@ -54,5 +55,3 @@ export default {
   }
 };
 </script>
-
-<style></style>
